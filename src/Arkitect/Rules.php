@@ -32,6 +32,7 @@ use Arkitect\Expression\ForClasses\NotHaveNameMatching;
 use Arkitect\Expression\ForClasses\NotResideInTheseNamespaces;
 use Arkitect\Expression\ForClasses\ResideInOneOfTheseNamespaces;
 use Arkitect\Rules\Rule;
+use Closure;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Arkitect\Expression\ForClasses\NotHaveAttribute;
 use Valkyrja\Cli\Routing\Provider\Contract\CliRouteProviderContract;
@@ -47,11 +48,11 @@ class Rules
     /**
      * @return Closure(Config): void
      */
-    public static function getRules(): Closure
+    public static function getRules(string $srcDir, string $testsDir): Closure
     {
-        return static function (Config $config): void {
-            $srcClassSet  = ClassSet::fromDir(__DIR__ . '/../../../src');
-            $testClassSet = ClassSet::fromDir(__DIR__ . '/../../../tests');
+        return static function (Config $config) use ($srcDir, $testsDir): void {
+            $srcClassSet  = ClassSet::fromDir($srcDir);
+            $testClassSet = ClassSet::fromDir($testsDir);
 
             $srcRules  = [];
             $testRules = [];
