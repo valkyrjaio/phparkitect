@@ -32,6 +32,7 @@ use Arkitect\Expression\ForClasses\NotHaveNameMatching;
 use Arkitect\Expression\ForClasses\NotResideInTheseNamespaces;
 use Arkitect\Expression\ForClasses\ResideInOneOfTheseNamespaces;
 use Arkitect\Rules\Rule;
+use Attribute;
 use Closure;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Arkitect\Expression\ForClasses\NotHaveAttribute;
