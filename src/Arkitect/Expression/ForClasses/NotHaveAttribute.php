@@ -20,8 +20,6 @@ use Arkitect\Rules\Violation;
 use Arkitect\Rules\ViolationMessage;
 use Arkitect\Rules\Violations;
 
-use function var_dump;
-
 final class NotHaveAttribute implements Expression
 {
     /** @var string */
