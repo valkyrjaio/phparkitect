@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja PHPArkitect package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -340,6 +340,7 @@ class Rules
                 ->andThat(new NotHaveNameMatching('*TestCase'))
                 ->andThat(new NotHaveNameMatching('*AttributeClass'))
                 ->andThat(new NotHaveNameMatching('*EnvClass'))
+                ->andThat(new NotHaveNameMatching('*Parent*'))
                 ->andThat(new NotResideInTheseNamespaces('Valkyrja\\Tests\\Classes\\Vendor'))
                 ->andThat(new IsNotAbstract())
                 ->andThat(new IsNotTrait())
