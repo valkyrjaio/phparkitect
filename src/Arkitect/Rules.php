@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja PHPArkitect package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -35,6 +35,7 @@ use Arkitect\Expression\ForClasses\ResideInOneOfTheseNamespaces;
 use Arkitect\Rules\Rule;
 use Attribute;
 use Closure;
+use Throwable;
 use Valkyrja\Application\Provider\Contract\ComponentProviderContract;
 use Valkyrja\Arkitect\Expression\ForClasses\NotHaveAttribute;
 use Valkyrja\Cli\Routing\Provider\Contract\CliRouteProviderContract;

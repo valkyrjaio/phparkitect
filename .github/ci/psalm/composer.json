@@ -3,7 +3,8 @@
     "php" : ">=8.4"
   },
   "require-dev"       : {
-    "valkyrja/psalm" : "^26.1.0"
+    "valkyrja/psalm"    : "^26.1.0",
+    "valkyrja/valkyrja" : "26.x-dev"
   },
   "scripts"           : {
     "check"               : "vendor/bin/psalm --config=psalm.xml --memory-limit=-1 --threads=4 --show-info=false",

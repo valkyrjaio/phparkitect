@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Valkyrja PHPArkitect package.
+ * This file is part of the Valkyrja Framework package.
  *
  * (c) Melech Mizrachi <melechmizrachi@gmail.com>
  *
@@ -19,6 +19,7 @@ use Arkitect\Expression\Expression;
 use Arkitect\Rules\Violation;
 use Arkitect\Rules\ViolationMessage;
 use Arkitect\Rules\Violations;
+use Override;
 
 final class NotHaveAttribute implements Expression
 {
@@ -30,11 +31,19 @@ final class NotHaveAttribute implements Expression
         $this->attribute = $attribute;
     }
 
+    /**
+     * @inheritDoc
+     */
+    #[Override]
     public function describe(ClassDescription $theClass, string $because): Description
     {
         return new Description("should not have the attribute {$this->attribute}", $because);
     }
 
+    /**
+     * @inheritDoc
+     */
+    #[Override]
     public function evaluate(ClassDescription $theClass, Violations $violations, string $because): void
     {
         if (! $theClass->hasAttribute($this->attribute)) {
