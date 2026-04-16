@@ -16,9 +16,7 @@
     }
   ],
   "require"           : {
-    "php" : ">=8.4"
-  },
-  "require-dev"       : {
+    "php"                     : ">=8.4",
     "phparkitect/phparkitect" : "^0.8.0"
   },
   "autoload"          : {
