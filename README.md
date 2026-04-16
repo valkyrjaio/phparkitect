@@ -6,6 +6,61 @@
 
 PHPArkitect architectural rules and custom expressions for the Valkyrja project.
 
+<p>
+    <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/require/php" alt="PHP Version Require"></a>
+    <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/v" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/license" alt="License"></a>
+    <!-- <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/downloads" alt="Total Downloads"></a>-->
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/phparkitect/?branch=master"><img src="https://scrutinizer-ci.com/g/valkyrjaio/phparkitect/badges/quality-score.png?b=master" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/phparkitect?branch=master"><img src="https://coveralls.io/repos/github/valkyrjaio/phparkitect/badge.svg?branch=master" alt="Coverage Status" /></a>
+    <a href="https://shepherd.dev/github/valkyrjaio/phparkitect"><img src="https://shepherd.dev/github/valkyrjaio/phparkitect/coverage.svg" alt="Psalm Shepherd" /></a>
+    <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_phparkitect"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_phparkitect&metric=sqale_rating" alt="Maintainability Rating" /></a>
+</p>
+
+Build Status
+------------
+
+<table>
+    <tbody>
+        <tr>
+            <td>Linting</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcodesniffer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcodesniffer.yml/badge.svg?branch=master" alt="PHP Code Sniffer Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcsfixer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcsfixer.yml/badge.svg?branch=master" alt="PHP CS Fixer Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Coding Rules</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phparkitect.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phparkitect.yml/badge.svg?branch=master" alt="PHPArkitect Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/rector.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/rector.yml/badge.svg?branch=master" alt="Rector Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Static Analysis</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpstan.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpstan.yml/badge.svg?branch=master" alt="PHPStan Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/psalm.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/psalm.yml/badge.svg?branch=master" alt="Psalm Build Status"></a>
+            </td>
+        </tr>
+        <tr>
+            <td>Testing</td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpunit.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpunit.yml/badge.svg?branch=master" alt="PHPUnit Build Status"></a>
+            </td>
+            <td>
+                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/validate-composer.yml?query=branch%3Amaster"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/validate-composer.yml/badge.svg?branch=master" alt="Validate Composer Build Status"></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 ## Overview
 
 This repository contains two things:
@@ -16,11 +71,6 @@ This repository contains two things:
 
 2. **Custom expressions** — PHPArkitect `Expression` implementations that fill
    gaps in the built-in expression library.
-
-## Requirements
-
-- PHP >= 8.4
-- [`phparkitect/phparkitect`](https://github.com/phparkitect/arkitect) ^0.8.0
 
 ## Installation
 
