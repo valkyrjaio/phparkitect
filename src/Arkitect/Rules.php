@@ -88,8 +88,7 @@ class Rules
 
             $srcRules[] = Rule::allClasses()
                 ->that(new IsFinal())
-                ->andThat(new NotHaveNameMatching('*Security'))
-                ->andThat(new NotHaveNameMatching('*Provider'))
+                ->andThat(new HaveNameMatching('*Constant'))
                 ->should(new ResideInOneOfTheseNamespaces('*Constant\\'))
                 ->because('All final classes are constants and should exist in an appropriate namespace');
 
