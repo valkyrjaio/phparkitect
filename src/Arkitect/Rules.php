@@ -25,6 +25,7 @@ use Arkitect\Expression\ForClasses\IsFinal;
 use Arkitect\Expression\ForClasses\IsInterface;
 use Arkitect\Expression\ForClasses\IsNotAbstract;
 use Arkitect\Expression\ForClasses\IsNotEnum;
+use Arkitect\Expression\ForClasses\IsNotInterface;
 use Arkitect\Expression\ForClasses\IsNotTrait;
 use Arkitect\Expression\ForClasses\IsTrait;
 use Arkitect\Expression\ForClasses\NotContainDocBlockLike;
@@ -342,6 +343,7 @@ class Rules
                 ->andThat(new NotResideInTheseNamespaces('Valkyrja\\Tests\\Classes\\Vendor'))
                 ->andThat(new IsNotAbstract())
                 ->andThat(new IsNotTrait())
+                ->andThat(new IsNotInterface())
                 ->should(new IsFinal())
                 ->because('All test classes should be final');
 
@@ -349,6 +351,7 @@ class Rules
                 ->that(new ResideInOneOfTheseNamespaces('*Classes\\'))
                 ->andThat(new NotHaveNameMatching('*Enum'))
                 ->andThat(new IsNotTrait())
+                ->andThat(new IsNotInterface())
                 ->should(new HaveNameMatching('*Class'))
                 ->because('Testable classes should be named appropriately');
 
