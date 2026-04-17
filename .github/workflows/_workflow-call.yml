@@ -1,4 +1,4 @@
-name: PHPArkitect
+name: PHPArkitect Reusable Workflow
 
 on:
   workflow_call:
