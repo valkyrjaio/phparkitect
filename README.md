@@ -4,91 +4,54 @@
 
 # Valkyrja PHPArkitect
 
-PHPArkitect architectural rules and custom expressions for the Valkyrja project.
+Shared PHPArkitect configuration for Valkyrja PHP projects — architectural
+rules that encode the naming and namespace conventions used across the
+Valkyrja project, plus custom expressions that fill gaps in the built-in
+PHPArkitect expression library.
 
 <p>
     <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/require/php" alt="PHP Version Require"></a>
     <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/v" alt="Latest Stable Version"></a>
     <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/license" alt="License"></a>
-    <!-- <a href="https://packagist.org/packages/valkyrja/phparkitect"><img src="https://poser.pugx.org/valkyrja/phparkitect/downloads" alt="Total Downloads"></a>-->
-    <a href="https://scrutinizer-ci.com/g/valkyrjaio/phparkitect/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/phparkitect/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
-    <a href="https://coveralls.io/github/valkyrjaio/phparkitect?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/phparkitect/badge.svg?branch=26.x" alt="Coverage Status" /></a>
-    <a href="https://shepherd.dev/github/valkyrjaio/phparkitect"><img src="https://shepherd.dev/github/valkyrjaio/phparkitect/coverage.svg" alt="Psalm Shepherd" /></a>
+    <a href="https://github.com/valkyrjaio/ci-phparkitect-php/actions/workflows/ci.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/ci-phparkitect-php/actions/workflows/ci.yml/badge.svg?branch=26.x" alt="CI Status"></a>
+    <a href="https://scrutinizer-ci.com/g/valkyrjaio/ci-phparkitect-php/?branch=26.x"><img src="https://scrutinizer-ci.com/g/valkyrjaio/ci-phparkitect-php/badges/quality-score.png?b=26.x" alt="Scrutinizer"></a>
+    <a href="https://coveralls.io/github/valkyrjaio/ci-phparkitect-php?branch=26.x"><img src="https://coveralls.io/repos/github/valkyrjaio/ci-phparkitect-php/badge.svg?branch=26.x" alt="Coverage Status" /></a>
+    <a href="https://shepherd.dev/github/valkyrjaio/ci-phparkitect-php"><img src="https://shepherd.dev/github/valkyrjaio/ci-phparkitect-php/coverage.svg" alt="Psalm Shepherd" /></a>
     <a href="https://sonarcloud.io/summary/new_code?id=valkyrjaio_phparkitect"><img src="https://sonarcloud.io/api/project_badges/measure?project=valkyrjaio_phparkitect&metric=sqale_rating" alt="Maintainability Rating" /></a>
 </p>
 
-Build Status
-------------
-
-<table>
-    <tbody>
-        <tr>
-            <td>Linting</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcodesniffer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcodesniffer.yml/badge.svg?branch=26.x" alt="PHP Code Sniffer Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcsfixer.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpcsfixer.yml/badge.svg?branch=26.x" alt="PHP CS Fixer Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Coding Rules</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phparkitect.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phparkitect.yml/badge.svg?branch=26.x" alt="PHPArkitect Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/rector.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/rector.yml/badge.svg?branch=26.x" alt="Rector Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Static Analysis</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpstan.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpstan.yml/badge.svg?branch=26.x" alt="PHPStan Build Status"></a>
-            </td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/psalm.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/psalm.yml/badge.svg?branch=26.x" alt="Psalm Build Status"></a>
-            </td>
-        </tr>
-        <tr>
-            <td>Testing</td>
-            <td>
-                <a href="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpunit.yml?query=branch%3A26.x"><img src="https://github.com/valkyrjaio/phparkitect/actions/workflows/phpunit.yml/badge.svg?branch=26.x" alt="PHPUnit Build Status"></a>
-            </td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
-
-## Overview
+Overview
+--------
 
 This repository contains two things:
 
 1. **`Valkyrja\Arkitect\Rules`** — a reusable rule set that encodes the naming
-   and namespace conventions used across the Valkyrja project. Drop it into any
-   PHPArkitect config to enforce those conventions on your own code.
+   and namespace conventions used across the Valkyrja project. Drop it into
+   any PHPArkitect config to enforce those conventions on your own code.
+2. **Custom expressions** — PHPArkitect `Expression` implementations that
+   fill gaps in the built-in expression library.
 
-2. **Custom expressions** — PHPArkitect `Expression` implementations that fill
-   gaps in the built-in expression library.
+Installation
+------------
 
-## Installation
-
-```bash
+```
 composer require valkyrja/phparkitect
 ```
 
-## Usage
+Usage
+-----
 
 Reference `Rules::getRules()` from your `phparkitect.php` configuration file:
 
-```php
+```
 // phparkitect.php
 use Valkyrja\Arkitect\Rules;
 
 return Rules::getRules();
 ```
 
-`getRules()` returns a closure that receives a PHPArkitect `Config` object and
-registers all rules against two class sets:
+`getRules()` returns a closure that receives a PHPArkitect `Config` object
+and registers all rules against two class sets:
 
 - `src/` — source rules (naming, namespaces, architectural constraints)
 - `tests/` — test rules (finality, naming conventions for test helpers)
@@ -99,11 +62,12 @@ Valkyrja monorepo layout.
 
 Run PHPArkitect as normal:
 
-```bash
+```
 vendor/bin/phparkitect check
 ```
 
-## Rules Reference
+Rules Reference
+---------------
 
 ### Source Rules
 
@@ -219,16 +183,17 @@ final.
 | Classes not named `*Test` must not reside in `*Unit\` or `*Functional\`                                                               | Only tests live in test namespaces |
 | Traits (not `TestCase`) in tests must reside in `*Trait\` and be named `*Trait`                                                       | Test trait conventions             |
 
-## Custom Expressions
+Custom Expressions
+------------------
 
 ### `NotHaveAttribute`
 
 `Valkyrja\Arkitect\Expression\ForClasses\NotHaveAttribute`
 
-The inverse of PHPArkitect's built-in `HaveAttribute`. Evaluates to a violation
-when the target class **does** carry the specified PHP attribute.
+The inverse of PHPArkitect's built-in `HaveAttribute`. Evaluates to a
+violation when the target class **does** carry the specified PHP attribute.
 
-```php
+```
 use Valkyrja\Arkitect\Expression\ForClasses\NotHaveAttribute;
 
 Rule::allClasses()
@@ -239,7 +204,7 @@ Rule::allClasses()
 
 **Constructor:**
 
-```php
+```
 new NotHaveAttribute(string $attribute)
 ```
 
@@ -253,7 +218,8 @@ new NotHaveAttribute(string $attribute)
 <FQCN> should not have the attribute <attribute> because <reason>
 ```
 
-## Workflows
+Workflows
+---------
 
 The [`_workflow-call.yml`](.github/workflows/_workflow-call.yml) reusable
 workflow runs PHPArkitect against the calling repository's source. It is
@@ -275,7 +241,7 @@ designed to be called from other repositories via `workflow_call`.
 ```yaml
 jobs:
   phparkitect:
-    uses: valkyrjaio/phparkitect/.github/workflows/_workflow-call.yml@26.x
+    uses: valkyrjaio/ci-phparkitect-php/.github/workflows/_workflow-call.yml@26.x
     permissions:
       pull-requests: write
       contents: read
@@ -295,3 +261,29 @@ jobs:
 
 `secrets: inherit` is required to pass the `VALKYRJA_GHA_APP_ID` and
 `VALKYRJA_GHA_PRIVATE_KEY` org secrets used for PR comments.
+
+Contributing
+------------
+
+See [`CONTRIBUTING.md`][contributing url] for the submission process and
+[`VOCABULARY.md`][vocabulary url] for the terminology used across Valkyrja.
+
+Security Issues
+---------------
+
+If you discover a security vulnerability, please follow our
+[disclosure procedure][security vulnerabilities url].
+
+License
+-------
+
+Licensed under the [MIT license][MIT license url]. See
+[`LICENSE.md`](./LICENSE.md).
+
+[contributing url]: https://github.com/valkyrjaio/.github/blob/master/CONTRIBUTING.md
+
+[vocabulary url]: https://github.com/valkyrjaio/.github/blob/master/VOCABULARY.md
+
+[security vulnerabilities url]: https://github.com/valkyrjaio/.github/blob/master/SECURITY.md
+
+[MIT license url]: https://opensource.org/licenses/MIT
